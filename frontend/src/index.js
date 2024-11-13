@@ -29,6 +29,10 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen.jsx';
 import OrderScreen from './screens/OrderScreen.jsx';
 import ProfileScreen from './screens/ProfileScreen.jsx';
 import OrderListScreen from './screens/admin/OrderListScreen.jsx';
+import ProductListScreen from './screens/admin/ProductListScreen.jsx';
+import ProductEditScreen from './screens/admin/ProductEditScreen.jsx';
+import UserListScreen from './screens/admin/UserListScreen.jsx';
+import UserEditScreen from './screens/admin/UserEditScreen.jsx';
 
 
 // createBrowserRouter: Creates the router and defines the routes for the app.
@@ -39,7 +43,7 @@ const router = createBrowserRouter(
   //  takes JSX elements and converts them into a route configuration that the router can understand
   createRoutesFromElements(
 
-    // route where the root path '/' renders the App component - acts asmain component
+    // route where the root path '/' renders the App component - acts as main component
     <Route path='/' element={<App/>}>
 
       {/*  Nested Route: Tells the router to render the HomeScreen component when the user is at the root (/) URL.*/}
@@ -61,6 +65,10 @@ const router = createBrowserRouter(
 
 <Route path='' element={<AdminRoute />}>
 <Route path='/admin/orderlist' element={<OrderListScreen/>}/>
+<Route path='/admin/productlist' element={<ProductListScreen/>}/>
+<Route path='/admin/product/:id/edit' element={<ProductEditScreen/>}/>
+<Route path='/admin/userlist' element={<UserListScreen/>}/>
+<Route path='/admin/user/:id/edit' element={<UserEditScreen/>}/>
 </Route>
 
 </Route>
