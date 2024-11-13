@@ -5,6 +5,7 @@ import {LinkContainer} from 'react-router-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLogoutMutation } from '../slices/userApiSlice';
 import {logout} from '../slices/authSlice';
+import SearchBox from './SearchBox';
 import logo from '../assets/logo.png';
 
 const Header = () => {
@@ -48,6 +49,7 @@ const Header = () => {
     <Navbar.Collapse id="basic-navbar-nav">
         
         <Nav className="ms-auto">
+          <SearchBox />
             {/* Nav item with nav link and nav icon */}
             <LinkContainer to="/cart">
 <Nav.Link>
