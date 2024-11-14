@@ -17,7 +17,7 @@ reducers: {
 
     logout: (state, action) => {
         state.userInfo = null;
-        localStorage.removeItem('userInfo');
+        localStorage.clear();
 
     }
 }

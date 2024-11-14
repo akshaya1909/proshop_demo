@@ -130,7 +130,7 @@ try {
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                    {error && <Message variant='danger'>{error.data?.message || 'An error occurred'}</Message>}
+                    {error && <Message variant='danger'>{error.data.message}</Message>}
                 </ListGroup.Item>
 
                 <ListGroup.Item>
